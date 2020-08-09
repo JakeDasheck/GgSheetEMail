@@ -1,0 +1,46 @@
+function CheckColumnDate() {
+  var i = 2;
+  var j = 1;
+  
+  while (i++) {
+    // get date from the first cell and iterate on the column
+ var rowDate = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Calendar").getRange("A"+i).getValue();
+ 
+    // get name of addressee from first cell and iterate on the column
+    var addressee = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Calendar").getRange("C"+i).getValue();
+    
+if (rowDate == "") break;
+   j=1;
+   
+    while(j++) {
+      // search name of addressee email adress from the spreadsheet and iterate on the column
+    var getNameToEmail = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("emailAddresses").getRange("A"+j).getValue();
+    
+      if(getNameToEmail == addressee) {
+        var email = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("emailAddresses").getRange("B"+j).getValue();
+        
+        EmailSender(rowDate, email); 
+        break;
+      }
+      
+      if (getNameToEmail == "") break;
+      }
+}
+
+}
+function EmailSender(rowDate, email) {
+  // set format of date
+  var rowDateToDate = rowDate.getDate() + "-" + (rowDate.getMonth()+1) + "-" + rowDate.getFullYear()
+    
+  // get today date
+  var today = new Date();
+  var todayToDate = today.getDate() + "-" + (today.getMonth()+1) + "-" + today.getFullYear();
+
+// Check dates
+  if (rowDateToDate == todayToDate) {  
+// Send Alert Email.
+var subject = 'Your e-mail subject';
+var message = 'Your e-mail message :)'; // Second column
+MailApp.sendEmail(email, subject, message);
+  } 
+}
