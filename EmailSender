@@ -12,8 +12,8 @@ function CheckColumnDate() {
 if (rowDate == "") break;
    j=1;
    
+   // search the name of addressee email adress from the spreadsheet and iterate on the column
     while(j++) {
-      // search name of addressee email adress from the spreadsheet and iterate on the column
     var getNameToEmail = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("emailAddresses").getRange("A"+j).getValue();
     
       if(getNameToEmail == addressee) {
@@ -26,8 +26,9 @@ if (rowDate == "") break;
       if (getNameToEmail == "") break;
       }
 }
-
 }
+
+// function to send the e-mail
 function EmailSender(rowDate, email) {
   // set format of date
   var rowDateToDate = rowDate.getDate() + "-" + (rowDate.getMonth()+1) + "-" + rowDate.getFullYear()
@@ -38,9 +39,10 @@ function EmailSender(rowDate, email) {
 
 // Check dates
   if (rowDateToDate == todayToDate) {  
+  
 // Send Alert Email.
 var subject = 'Your e-mail subject';
-var message = 'Your e-mail message :)'; // Second column
+var message = 'Your e-mail message :)'; 
 MailApp.sendEmail(email, subject, message);
   } 
 }
