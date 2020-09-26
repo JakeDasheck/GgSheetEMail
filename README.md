@@ -17,7 +17,7 @@ Project is created with:
 ## Setup
 To use this script you have to:
 
-```
+
 1. Make a new Google Sheet file and make two sheets in it.
 2. You need to name the sheets as follows: "Calendar" and "emailAddresses" (without quotation marks).
 3. The "Calendar" sheet has to look like screenshot below:
