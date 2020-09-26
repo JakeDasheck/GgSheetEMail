@@ -24,12 +24,12 @@ To use this script you have to:
 a. In the A ("Day") column you have to write a date when scritp should send the e-mail.
 b. OPTIONAL In the B ("Day of the week") you can write a day of the week, when the script should send the e-mail.
 c. In the C ("Name Surname") column you have to write name and surname of addressee.
-![Calendar sheet](./images/Calendar.png)
+![Calendar sheet](./Images/Calendar.png)
 
 4. The "emailAdresses" sheet has to look like screenshot below:
 a. In the A ("Name Surname") column you have to write name and surname of addressee.
 b. In the B ("Email Address) column you have to write a e-mail adresses for each addressee. 
-![emailAdresses sheet](./images/emailAdresses.png)
+![emailAdresses sheet](./Images/emailAdresses.png)
 
 5. Than, you have open the script editor from: Tools -> Script Editor and make a new project.
 6. Next, go to my GgSheetEMail repository, copy entire script from it (EmailSender file) and paste it into the script editor.
