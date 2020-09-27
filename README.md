@@ -1,5 +1,5 @@
 # GoogleSheetEMailSender 
-## Script to sending automatically emails for Google Sheet users.
+## Script to automatically send emails from Google Sheet forms.
 
 * [General info](#general-info)
 * [Technologies](#technologies)
