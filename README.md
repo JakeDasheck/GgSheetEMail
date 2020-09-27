@@ -6,8 +6,8 @@
 * [Setup](#setup)
 
 ## General info
-This project is a Google Sheets script which automatically sends email messages to users.
-The script compares dates and send an email to the person which was assigned to the date.
+This project is Google Sheets script which automatically send email messages to users.
+The script compares dates and send email to the person which were assigned to the date.
 	
 ## Technologies
 Project is created with:
